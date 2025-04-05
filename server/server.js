@@ -5,7 +5,9 @@ const path = require('path');
 const app = express();  
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:5173',
+}));
 app.use(express.json());
 
 // Import routes
@@ -19,6 +21,11 @@ app.use("/movies", moviesRoute);
 app.use("/book", bookMovieRoute);
 app.use("/bookings", bookingsRoute);
 app.use("/delete", deleteBookingsRoute);
+
+// Default Route
+app.get('/', (req, res) => {
+    res.send("Hi there! Welcome to the Movie Booking API.");
+});
 
 const port = 3000;
 

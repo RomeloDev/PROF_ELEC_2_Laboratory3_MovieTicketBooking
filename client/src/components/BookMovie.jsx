@@ -18,7 +18,7 @@ const BookMovie = ({ movieID, movieName, onClose, onBookingSuccess }) => {
       onBookingSuccess();
       onClose(); // Close the modal after booking
     } catch (error) {
-      alert(error.response?.data?.error || 'Booking failed. Please try again.');
+      alert(error || 'Booking failed. Please try again.');
     }
   };
 

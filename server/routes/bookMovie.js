@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const bookings = require('../data/bookingsList');
+const bookings = require('../data/bookingsList');  //Importing booking data
 
-let movies = require('../data/movieList');
-//let bookings = [];
+let movies = require('../data/movieList');  //Importing movie data
 
 router.post("/", (req, res) => {
-    const { movieID, customerName } = req.body;
+    const { movieID, customerName } = req.body;  //Extracting data from request body
 
     //Input Validation 
     if (!movieID || !customerName) {
