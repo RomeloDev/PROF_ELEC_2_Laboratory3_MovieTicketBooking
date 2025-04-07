@@ -14,7 +14,7 @@ router.delete("/:id", (req, res) => {
 
     // Remove the booking from the bookings list
     const deletedBooking = bookings.splice(bookingIndex, 1);
-
+    
     // Find the corresponding movie and update the seat count
     const movie = movies.find(m => m.id === deletedBooking[0].movieID);
     if (movie) {

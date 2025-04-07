@@ -62,6 +62,14 @@ let movies = [
         showingDate: "04/25/2025 - 12:00 PM",
         seats: 50,
         image: "https://m.media-amazon.com/images/M/MV5BYjBkOWUwODYtYWI3YS00N2I0LWEyYTktOTJjM2YzOTc3ZDNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    },
+    {
+        id: 9,
+        title: "Tron: Ares",
+        genre: "Action, Adventure, Sci-Fi, Cyberpunk",
+        showingDate: "10/10/2025 - 02:00 PM",
+        seats: 50,
+        image: "https://m.media-amazon.com/images/M/MV5BMmJiMWE2NTYtZWMyZC00Yzg0LTg0YjItZDM3ODlkYTRhNWNlXkEyXkFqcGc@._V1_.jpg",
     }
 ];
 

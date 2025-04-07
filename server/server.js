@@ -1,14 +1,14 @@
 const express =  require('express');
 const cors = require('cors');
-const path = require('path');
+
 
 const app = express();  
 
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
     origin: 'http://localhost:5173',
 }));
-app.use(express.json());
+
+app.use(express.json()); //allows the server to automatically parse JSON data sent in the request body
 
 // Import routes
 const moviesRoute = require('./routes/movies');
@@ -17,7 +17,7 @@ const bookingsRoute = require('./routes/bookings');
 const deleteBookingsRoute = require('./routes/deleteBookings');
 
 // Use routes
-app.use("/movies", moviesRoute);
+app.use("/movies", moviesRoute);    
 app.use("/book", bookMovieRoute);
 app.use("/bookings", bookingsRoute);
 app.use("/delete", deleteBookingsRoute);

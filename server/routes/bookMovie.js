@@ -3,7 +3,7 @@ const router = express.Router();
 const bookings = require('../data/bookingsList');  //Importing booking data
 const { v4: uuidv4 } = require('uuid');  //UUID for unique booking ID
 
-let movies = require('../data/movieList');  //Importing movie data
+const movies = require('../data/movieList');  //Importing movie data
 
 router.post("/", (req, res) => {
     const { movieID, customerName } = req.body;  //Extracting data from request body
@@ -31,7 +31,8 @@ router.post("/", (req, res) => {
         movieID,
         customerName,
         movieTitle: movie.title,
-        bookingDate: new Date().toISOString()
+        bookingDate: new Date().toLocaleString(),
+        showingDate: movie.showingDate,
     };
 
     //Update seats and save booking

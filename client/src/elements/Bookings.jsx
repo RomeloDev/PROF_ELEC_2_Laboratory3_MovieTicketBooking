@@ -56,6 +56,7 @@ const Bookings = () => {
                   <th scope='col' className='px-6 py-3'>Movie Name</th>
                   <th scope='col' className='px-6 py-3'>Customer Name</th>
                   <th scope='col' className='px-6 py-3'>Booking Date</th>
+                  <th scope='col' className='px-6 py-3'>Showing Date</th>
                   <th scope='col' className='px-6 py-3'>Action</th>
                 </tr>
               </thead>
@@ -85,6 +86,9 @@ const Bookings = () => {
                     </td>
                     <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         {booking.bookingDate}
+                    </td>
+                    <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        {booking.showingDate}
                     </td>
                     <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       <button type="button" onClick={() => cancelBooking(booking.id)} className="text-white bg-red-800 hover:bg-red-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-1 dark:bg-red-600 dark:hover:bg-red-800 focus:outline-none dark:focus:ring-red-800">Cancel</button>
